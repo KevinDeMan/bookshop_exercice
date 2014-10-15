@@ -13,10 +13,10 @@ public class HelloWorldFromConfigMain {
 		AbstractApplicationContext context = new AnnotationConfigApplicationContext(ProductionConfig.class);
 
 		GreetingService greetingService1 = context.getBean("greetingService1", GreetingService.class);
-		greetingService1.helloWorld();
+		greetingService1.saySomething();
 		
 		GreetingService greetingService2 = context.getBean("greetingService2", GreetingService.class);	
-		greetingService2.helloWorld();
+		greetingService2.saySomething();
 		
 		// zorgt ervoor dat alle code wordt uitgevoerd bij eindigen
 		context.close();

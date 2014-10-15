@@ -25,7 +25,7 @@ public class GreetingServiceImpl implements GreetingService{
 	
 
 	@Override
-	public void helloWorld() {
+	public void saySomething() {
 		System.out.println( message );
 	}
 
