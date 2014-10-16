@@ -1,24 +1,32 @@
 package com.realdolmen.bookshop.services;
 
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import com.realdolmen.bookshop.domain.Book;
 import com.realdolmen.bookshop.domain.VatNumber;
 
 public interface BookService {
 	
-	public String getBookStoreName();
+	String getBookStoreName();
 	
-	public Set<String> getManagers();
+	Set<String> getManagers();
 	
-	public String getBookTitleByIsbn(String isbn) throws IllegalArgumentException;
+	List<Book> getAllBooks();
 	
-	public boolean validateCreditCard(String creditCard);
+	List<Book> getBooksByCategory(String category);
 	
-	public void setVatNumber(VatNumber vatNumber);
+	Book getBookTitleByIsbn(String isbn) throws IllegalArgumentException;
 	
-	public VatNumber getVatNumber();
+	boolean validateCreditCard(String creditCard);
+	
+	void setVatNumber(VatNumber vatNumber);
+	
+	VatNumber getVatNumber();
+	
+	void addBookToStore(Book book);
 
 }
